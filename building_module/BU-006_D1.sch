@@ -8,7 +8,7 @@
                 bldg:lod3MultiSurface | bldg:lod3Solid |
                 bldg:lod4MultiSurface | bldg:lod4Solid
                 else true()">
-                <name/> with <value-of select="@gml:id"/> comprises of outerBuildingInstallation
+                <name/> with id: <value-of select="@gml:id"/> comprises of outerBuildingInstallation
                 property and should accordingly consist of lodXSolid or lodXMultiSurface 
                 direct properties with X={2,3,4}
             </assert>
