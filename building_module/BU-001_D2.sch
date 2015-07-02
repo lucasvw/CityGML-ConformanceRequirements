@@ -3,8 +3,8 @@
     <ns uri="http://www.opengis.net/citygml/building/2.0" prefix="bldg"/>
     <pattern>
         <rule context="bldg:BuildingPart">
-            <assert test="../..[name()='bldg:Building']">
-                BuildingPart with id <value-of select="@gml:id"/> has no Building as parent
+            <assert test="../../bldg:Building">
+                BuildingPart with id <value-of select="@gml:id"/> has no Building as grandparent
             </assert>
         </rule>
     </pattern>

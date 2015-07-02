@@ -6,7 +6,10 @@
             <assert test="if (bldg:outerBuildingInstallation) then
                 bldg:lod2MultiSurface | bldg:lod2Solid |
                 bldg:lod3MultiSurface | bldg:lod3Solid |
-                bldg:lod4MultiSurface | bldg:lod4Solid
+                bldg:lod4MultiSurface | bldg:lod4Solid |
+                bldg:boundedBy/descendant::bldg:lod2MultiSurface |
+                bldg:boundedBy/descendant::bldg:lod3MultiSurface |
+                bldg:boundedBy/descendant::bldg:lod4MultiSurface
                 else true()">
                 <name/> with id: <value-of select="@gml:id"/> comprises of outerBuildingInstallation
                 property and should accordingly consist of lodXSolid or lodXMultiSurface 

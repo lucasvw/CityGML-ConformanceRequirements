@@ -3,7 +3,7 @@
     <ns uri="http://www.opengis.net/citygml/building/2.0" prefix="bldg"/>
     <pattern>
         <rule context="bldg:BuildingPart">
-            <assert test="ancestor::*[name()='bldg:Building']">
+            <assert test="ancestor::bldg:Building">
                 BuildingPart with id <value-of select="@gml:id"/> has no Building as ancestor
             </assert>
         </rule>

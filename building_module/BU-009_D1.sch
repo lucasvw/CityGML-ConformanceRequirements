@@ -5,7 +5,8 @@
         <rule context="bldg:BuildingPart | bldg:Building">
             <assert test="if (child::bldg:interiorRoom) then  
                 bldg:lod4Solid or
-                bldg:lod4MultiSurface else true()">
+                bldg:lod4MultiSurface or 
+                bldg:boundedBy/descendant::bldg:lod4MultiSurface else true()">
                 <name/> with id:<value-of select="@gml:id"/> does not comprise of LoD 4
                 geometry, this is required when the interiorRoom property is used.
             </assert>
